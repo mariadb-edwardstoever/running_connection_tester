@@ -62,7 +62,7 @@ GRANT USAGE ON *.* TO `appli`@`%`;
 
 ### Queries Per Minute
 
-The Running Connection Tester will run whatever sql scripts that are placed in the "SQL" directory, chosen at random. Using one script is recommended and one is provided. A minimal query is recommended, but any query, DML, or SQL code block that you prefer can be used. 
+The Running Connection Tester will run whatever sql scripts that are placed in the "SQL" directory, chosen at random. Using one script is recommended and one is provided. A minimal query is recommended, but any query, DML, or SQL code block that you prefer can be used. The default is to run 30 queries per minute, which will detect and log a break in connectivity within 2 seconds.
 
 ### Stopping the Simulator prematurely
 
