@@ -70,7 +70,7 @@ When running in interactive mode, you can quit a running connection pool at any 
 ```
 ./establish_connection.sh --cleanup
 ```
-For non-interactive use, you can perform a graceful shutdown that does not require clean up. Stop the running simulator from with the stop_run.sh script:
+For non-interactive use, you can perform a graceful shutdown that does not require clean up. Stop the running simulator using the stop_run.sh script:
 ```
 ./stop_run.sh
 ```
