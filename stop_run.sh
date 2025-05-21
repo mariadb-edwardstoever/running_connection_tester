@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# conn_pool_sim.sh Connection Pool Simulator
+# Mariadb Running Connection Tester
 # By Edward Stoever for MariaDB Support
 unset ERR
 INTERACTIVE=TRUE

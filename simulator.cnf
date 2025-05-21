@@ -5,7 +5,7 @@
 # If none are specified, the script will attempt a socket connection from 
 # unix account, such as root@localhost.
 
-# The group name must be [conn_pool_sim]
+# The group name must be [running_connection_tester]
 [running_connection_tester]
 user = appli
 password = "noodlehead"
