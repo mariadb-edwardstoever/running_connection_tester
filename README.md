@@ -2,7 +2,7 @@
 
 ### Purpose
 
-The Mariadb Running Connection Tester is a bash script that uses the Mariadb command line client to create a long-running connection to a server. This connection is kept alive by frequently sending a minimal query to the server. Faults in connectivity are logged with a timestamp for comparison with other processes that have the potential to lose connectivity.
+The Mariadb Running Connection Tester is a bash *simulator* that uses the Mariadb command line client to create a long-running connection to a server. This connection is kept alive by frequently sending a minimal query to the server. Faults in connectivity are logged with a timestamp for comparison with other processes that have the potential to lose connectivity.
 
 ### Setting up the Simulator
 There are two steps to setting up the simulator:
