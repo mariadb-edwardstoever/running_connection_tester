@@ -2,9 +2,9 @@
 -- Script distributed with MARIADB RUNNING CONNECTION TESTER
 
 -- This SQL script can contain any valid STATEMENTS or ANONYMOUS BLOCKS. This script will be run by the running connection tester.
--- The reason to run this script it to have some activity, and communication between the client and server which will
+-- The reason to run this script is to have some activity and communication between the client and server which will
 -- keep the session alive over a long period of time. It will also ensure that any interruption in the communication 
--- from client to server is detected quickly. For this reason, a minimal query that is run once ever 2 seconds is recommended.
+-- from client to server is detected quickly. For this reason, a minimal query that is run once every 2 seconds is recommended.
 
 -- The minimum query possible which communicates from client to server and from server to client is "select 1;"
 -- select 1;
