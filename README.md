@@ -4,8 +4,8 @@
 
 The Mariadb Running Connection Tester is a bash *simulator* that uses the Mariadb command line client to create a long-running connection to a server. This connection is kept alive by frequently sending a minimal query to the server. Faults in connectivity are logged with a timestamp for comparison with other processes that have the potential to lose connectivity.
 
-### Setting up the Simulator
-There are two steps to setting up the simulator:
+### Setting up the Running Connection Tester
+There are two steps to setting up the tester:
 
  1. In the SQL directory, you will find a SQL script "query.sql". You can use this as it is or edit it. All it needs to have is a query that costs nothing to run and can be seen in the processlist. The default query is:
  ```
@@ -14,7 +14,7 @@ select sleep(1) as zero, 1 as one;
 
  2. Edit the file simulator.cnf and configure the connection. The standard syntax for mariadb client configuration applies. Any value that can work with Mariadb client is acceptable including values for configuring SSL/TLS.
  
-### Examples of running the Simulator from the command line
+### Examples of running the Tester from the command line
 
 ```
 ./establish_connection.sh 
@@ -64,13 +64,13 @@ GRANT USAGE ON *.* TO `appli`@`%`;
 
 The Running Connection Tester will run whatever sql scripts that are placed in the "SQL" directory, chosen at random. Using one script is recommended and one is provided. A minimal query is recommended, but any query, DML, or SQL code block that you prefer can be used. The default is to run 30 queries per minute, which will detect and log a break in connectivity within 2 seconds.
 
-### Stopping the Simulator prematurely
+### Stopping the Tester prematurely
 
-When running in interactive mode, you can quit a running connection pool at any time with ctrl+c. This will leave background processes running that will require a clean-up. Run the simulator script again with the cleanup option:
+When running in interactive mode, you can quit a running connection pool at any time with ctrl+c. This will leave background processes running that will require a clean-up. Run the script again with the cleanup option:
 ```
 ./establish_connection.sh --cleanup
 ```
-For non-interactive use, you can perform a graceful shutdown that does not require clean up. Stop the running simulator using the stop_run.sh script:
+For non-interactive use, you can perform a graceful shutdown that does not require clean up. Stop the running process using the stop_run.sh script:
 ```
 ./stop_run.sh
 ```
